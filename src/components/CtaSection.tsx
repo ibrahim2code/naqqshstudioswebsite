@@ -2,12 +2,8 @@ import { type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Reveal } from '@/components/Reveal';
-import { SmartImage } from '@/components/SmartImage';
-import { IMAGES } from '@/lib/content';
 
 type CtaSectionProps = {
-  image?: string;
-  imageAlt?: string;
   eyebrow?: string;
   headline: ReactNode;
   subtext?: string;
@@ -15,8 +11,6 @@ type CtaSectionProps = {
 };
 
 export function CtaSection({
-  image = IMAGES.finalCta,
-  imageAlt = IMAGES.finalCtaAlt,
   eyebrow = 'Start',
   headline,
   subtext,
@@ -27,8 +21,8 @@ export function CtaSection({
       <Reveal>
         <p className="eyebrow mb-8">{eyebrow}</p>
       </Reveal>
-      <div className="grid gap-12 lg:grid-cols-12 lg:items-end">
-        <div className="lg:col-span-7">
+      <div className="grid gap-12">
+        <div>
           <Reveal>
             <h2 className="display text-[2.75rem] sm:text-6xl lg:text-7xl text-ivory">{headline}</h2>
           </Reveal>
@@ -51,16 +45,6 @@ export function CtaSection({
                 className="transition-transform duration-500 ease-editorial group-hover:translate-x-1.5"
               />
             </Link>
-          </Reveal>
-        </div>
-        <div className="lg:col-span-4 lg:col-start-9">
-          <Reveal delay={150}>
-            <SmartImage
-              src={image}
-              alt={imageAlt}
-              ratio="4 / 5"
-              className="border border-line"
-            />
           </Reveal>
         </div>
       </div>

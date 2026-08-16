@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Reveal } from '@/components/Reveal';
-import { SmartImage } from '@/components/SmartImage';
 import { FaqList } from '@/components/FaqList';
 import { CtaSection } from '@/components/CtaSection';
 import { IMAGES, HOME_FAQ } from '@/lib/content';
@@ -108,7 +107,7 @@ function TheIdea() {
     <section className="border-t border-line">
       <div className="container-edit py-28 sm:py-44">
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-12">
             <Reveal>
               <p className="eyebrow mb-8">01 — The idea</p>
             </Reveal>
@@ -124,16 +123,6 @@ function TheIdea() {
                 A photo tells a guest what a room looks like. A film lets them walk through it
                 before they arrive.
               </p>
-            </Reveal>
-          </div>
-          <div className="lg:col-span-4 lg:col-start-9">
-            <Reveal delay={150}>
-              <SmartImage
-                src={IMAGES.idea}
-                alt={IMAGES.ideaAlt}
-                ratio="3 / 4"
-                className="border border-line"
-              />
             </Reveal>
           </div>
         </div>

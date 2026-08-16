@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Check } from 'lucide-react';
 import { Reveal } from '@/components/Reveal';
-import { SmartImage } from '@/components/SmartImage';
 import { FaqList } from '@/components/FaqList';
 import { CtaSection } from '@/components/CtaSection';
-import { IMAGES, OFFER_FAQ } from '@/lib/content';
+import { CONTACT, IMAGES, OFFER_FAQ } from '@/lib/content';
 
 export function OfferPage() {
   return (
@@ -28,8 +27,6 @@ export function OfferPage() {
         }
         subtext="Send us one property. We'll send back a film. If you want more, we continue from there."
         primary={{ label: 'Get my first film free', to: '/get-started' }}
-        image={IMAGES.offerPortrait}
-        imageAlt={IMAGES.offerPortraitAlt}
       />
     </>
   );
@@ -154,7 +151,7 @@ function WhatYouReceive() {
     <section className="bg-charcoal border-t border-line">
       <div className="container-edit py-28 sm:py-44">
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-16 lg:items-center">
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-12">
             <Reveal>
               <p className="eyebrow mb-8">What you receive</p>
             </Reveal>
@@ -169,16 +166,6 @@ function WhatYouReceive() {
                 the way a guest would. Delivered as a shareable file, ready for your listing,
                 website, and socials.
               </p>
-            </Reveal>
-          </div>
-          <div className="lg:col-span-5 lg:col-start-8">
-            <Reveal delay={150}>
-              <SmartImage
-                src={IMAGES.offerReceive}
-                alt={IMAGES.offerReceiveAlt}
-                ratio="4 / 5"
-                className="border border-line"
-              />
             </Reveal>
           </div>
         </div>
@@ -253,6 +240,16 @@ function Plans() {
                         </li>
                       ))}
                     </ul>
+                    <div className="mt-6">
+                      <a
+                        href={CONTACT.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-4 inline-flex w-full items-center justify-center gap-3 rounded bg-ivory px-4 py-3 text-center text-sm font-sans text-ink transition-all duration-300 hover:bg-clay"
+                      >
+                        Get your first film — DM us on Instagram
+                      </a>
+                    </div>
                   </article>
                 </Reveal>
               ))}
