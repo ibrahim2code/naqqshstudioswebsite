@@ -36,14 +36,7 @@ function OfferHero() {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
-        <img
-          src={IMAGES.offerHero}
-          alt={IMAGES.offerHeroAlt}
-          loading="eager"
-          decoding="async"
-          className="kenburns h-full w-full object-cover opacity-25"
-          onError={(e) => { e.currentTarget.style.display = 'none'; }}
-        />
+        <div className="decorative-hero dimmed" />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/70 to-ink" />
       </div>
       <div className="relative container-edit pt-36 pb-24 sm:pt-48 sm:pb-36">

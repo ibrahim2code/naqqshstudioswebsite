@@ -177,14 +177,7 @@ function TheOffer() {
   return (
     <section className="relative overflow-hidden border-t border-line">
       <div className="absolute inset-0">
-        <img
-          src={IMAGES.offer}
-          alt={IMAGES.offerAlt}
-          loading="lazy"
-          decoding="async"
-          className="h-full w-full object-cover opacity-30"
-          onError={(e) => { e.currentTarget.style.display = 'none'; }}
-        />
+        <div className="decorative-hero dimmed" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/60" />
       </div>
       <div className="relative container-edit py-32 sm:py-48">
